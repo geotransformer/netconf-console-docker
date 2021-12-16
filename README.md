@@ -11,3 +11,22 @@ docker push hellt/netconf-console:2.3.0
 docker tag hellt/netconf-console:2.3.0 hellt/netconf-console:latest
 docker push hellt/netconf-console:latest
 ```
+
+## Deploy
+```bash
+# pull image
+docker pull hellt/netconf-console
+
+# verify that the tool is properly working,
+docker run --rm -it hellt/netconf-console --help
+
+# interactive console mode
+admin@ubuntu:~$ docker run -it --rm hellt/netconf-console --host=xx.xxx.xxx.xxx --port=830 -u admin -p Admin@123
+netconf> hello
+<?xml version='1.0' encoding='UTF-8'?>
+<nc:hello xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <nc:capabilities>
+  
+# interactive shell mode
+
+```
