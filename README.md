@@ -28,5 +28,7 @@ netconf> hello
   <nc:capabilities>
   
 # interactive shell mode
+ admin@ubuntu:~$ docker run -it --entrypoint /bin/sh --rm hellt/netconf-console 
+ admin@ubuntu:~$ docker run -it --entrypoint /bin/sh --rm -v $(pwd)/netconf:/rpc hellt/netconf-console 
 
 ```
